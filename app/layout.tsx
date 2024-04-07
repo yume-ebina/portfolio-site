@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import Image from "next/image";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +18,6 @@ export const metadata: Metadata = {
   },
   description: "蝦名結芽のポートフォリオサイトです",
 };
-
-const navItems = [
-  { label: "HOME", href: "/" },
-  { label: "ABOUT", href: "/about" },
-  { label: "WORKS", href: "/works" },
-  { label: "CONTAT", href: "/contact" },
-];
 
 export default function RootLayout({
   children,
@@ -38,21 +33,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="container h-16 flex items-center justify-between border-b">
-            <h1>LOGO</h1>
-            <ul className="flex gap-4">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <Button variant="ghost" asChild>
-                    <Link href={item.href}>{item.label}</Link>
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </header>
+          <Header />
           {children}
           <footer className="container sticky top-full h-16 flex justify-between items-center border-t">
-            <p>&copy; yume</p>
+            <p>&copy;2024 yume ebina</p>
             <ModeToggle />
           </footer>
         </ThemeProvider>

@@ -1,13 +1,16 @@
-import Image from "next/image";
-import Hero from "./about/components/hero";
-import Features from "./about/components/features";
-import Contact from "./about/components/contact";
+import About from "./about/page";
+import Skills from "./skills/page";
+import Works from "./works/page";
+import Hero from "@/components/hero";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Features />
+      <About />
+      <Skills />
+      <Works />
       <Contact />
     </main>
   );

@@ -1,13 +1,10 @@
+import Header from "@/components/header";
+import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
-import Image from "next/image";
-import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +32,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <footer className="container sticky top-full h-16 flex justify-between items-center border-t">
+          <footer className="sticky top-full h-16 flex justify-between items-center border-t px-24">
             <p>&copy;2024 yume ebina</p>
             <ModeToggle />
           </footer>

@@ -32,7 +32,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <footer className="sticky top-full h-16 flex justify-between items-center border-t px-24">
+          <footer className="sticky top-full h-16 flex justify-between items-center border-t px-8">
             <p>&copy;2024 yume ebina</p>
             <ModeToggle />
           </footer>
